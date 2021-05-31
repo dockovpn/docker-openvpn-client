@@ -15,4 +15,4 @@ RUN apk add --no-cache openvpn bash dumb-init
 VOLUME [ "/opt/Dockovpn_data" ]
 
 ENTRYPOINT [ "dumb-init", "./start.sh" ]
-CMD [ "" ]
+CMD [ "client.ovpn" ]

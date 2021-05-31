@@ -12,4 +12,6 @@ if [ ! -c /dev/net/tun ]; then
     mknod /dev/net/tun c 10 200
 fi
 
-openvpn --config /opt/Dockovpn_data/client.ovpn
+CLIENT_CONFIG=$1
+
+openvpn --config "/opt/Dockovpn_data/$CLIENT_CONFIG"
